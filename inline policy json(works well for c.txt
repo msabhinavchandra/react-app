@@ -1,0 +1,29 @@
+inline policy json(works well for customer managed policy too)
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole",
+                "iam:ListInstanceProfiles",
+                "iam:GetInstanceProfile"
+            ],
+            "Resource": [
+                "arn:aws:iam::929954248024:role/Role", // role-name
+                "arn:aws:iam::929954248024:instance-profile/Iam-User" // user-name, for 3exp role-name only
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:ListInstanceProfiles",
+            "Resource": "*"
+        }
+    ]
+}

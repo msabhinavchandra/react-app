@@ -1,0 +1,4 @@
+https://dev.to/cloudclubs/vpc-nat-gateway-tutorial-4ibp
+https://medium.com/@sanjuthamke9699/nat-gateway-with-s-698e8bb3f477
+https://tinyurl.com/kmitvpcnat
+https://youtu.be/ydxEeVAqVdo?feature=shared
