@@ -85,12 +85,12 @@ sudo file -s /dev/xvdg
 Format the volume: sudo mkfs -t ext4 /dev/xvdg
 sudo file -s /dev/xvdg (to check)
 Create mount point & mount:
-sudo mkdir /mnt/newvolume
+sudo mkdir /mnt/newvolume 
 sudo mount /dev/xvdg /mnt/newvolume
-
+// add a new file into this. put it.
 sudo umount /dev/xvdg (unmount before detatching okay?)
 sudo lsblk
-sudo mkdir -p /mnt/fixedvolume
+sudo mkdir -p /mnt/fixedvolume 
 sudo mount /dev/xvdg /mnt/fixedvolume
 sudo nano /mnt/fixedvolume/sample.txt
 sudo umount /mnt/fixedvolume
