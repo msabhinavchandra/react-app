@@ -1,0 +1,114 @@
+Exp-1
+sudp apt update
+sudo apt install nginx -y
+nginx -v
+sudo systemctl start nginx
+cd ..
+cd ..
+cd var/www/html
+sudo nano index.nginx-debian.html
+
+Exp-2
+security group rule 2
+type http source type anywhere then launch
+
+dockerfile
+FROM node
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+Run npm run build
+EXPOSE 80
+CMD ["npm","start"]
+
+sudo apt update
+sudo apt install git -y
+git clone https://github.com/scott2srikanth1/demo_frontend.git
+sudo apt install docker.io
+sudo docker build -t my-frontend-app .
+sudo docker run -d -p 80:3000 --name frontend-container my-frontend-app
+
+lambda
+Task 1: Create a Lambda function.
+			Use: tinyurl.com/kmitdemocode
+sample json data example:
+{
+  "teacher_id": "T12345",
+  "name": "John Doe"
+} 
+s3->general purpose->uniq bucket name->Acls enabled->unblock->acknowledge->create bucket
+dynamoDB->create table->table-name->partition key->create table
+table name is same as the name mentioned in the python script and the partition key is same as 
+mentioned in the json file that is to be uploaded into the S3 bucket.
+lambda->create function->function-name->python 3.9 runtime->existing role->labRole->create function->
+add trigger->S3->s3bucketNameAsPrev->i Acknowledge->add trigger->code->paste python->changeTableName->
+dynamoTableName->lambda_function.lambda_handler(for handler)->deploy code
+upload json with partition key in s3-> dynamoDB->explore items.
+
+s3 task:
+
+create a bucker->general purpose->all small cases bucket name->Enable ACLs->unblock+acknowledge
+bucket created->upload a html file->get into it->permissions->ACLs->4 boxes->->bucket->props->downscroll
+->edit static web hosting->enable->pass the html file name->get the link.
+
+EFS
+create sec groups
+1->EC2->name->inbound rules ssh anywhere->outbound->default
+2->EFS->name->inbound rules NFS custom EC2 SG->outbound->default 
+2 instances 2 diff availability zones subnets, common SG EC2 SG, eg us-east 1a, and 1f
+EFS create file system->name->default VPC->settings->network->set SG's for networks subnets as EFS SG
+click on attact to mount, mount with EFS helper replace efs with your curr dir name or dir name.
+and as follows, that's it.
+sudo yum -y install amazon-efs-utils
+sudo mkdir demo 
+sudo chown -R ec2-user demo
+mount with EFS with demo (attach basically)
+get into it create 2 folders and write something
+Another instance 
+sudo yum -y install amazon-efs-utils
+sudo mkdir demo2
+sudo chown -R ec2-user demo2
+mount with EFS with demo2 (attach basically)
+get into it 2 folders and write something or read something
+
+create directories and files which can be accessible from either of the instances
+sudo mkdir us-east-1a
+sudo mkdir us-east-1f
+
+EBS
+create an ec2 default volume instance(opt for dev/sdg only)
+at first format the disk
+
+sudo lsblk 
+sudo file -s /dev/xvdg
+Format the volume: sudo mkfs -t ext4 /dev/xvdg
+sudo file -s /dev/xvdg (to check)
+Create mount point & mount:
+sudo mkdir /mnt/newvolume
+sudo mount /dev/xvdg /mnt/newvolume
+
+sudo umount /dev/xvdg (unmount before detatching okay?)
+sudo lsblk
+sudo mkdir -p /mnt/fixedvolume
+sudo mount /dev/xvdg /mnt/fixedvolume
+sudo nano /mnt/fixedvolume/sample.txt
+sudo umount /mnt/fixedvolume
+
+sudo mkdir -p /mnt/attached
+sudo mount /dev/xvdg /mnt/attached
+ls /mnt/attached
+cat /mnt/attached/sample.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
